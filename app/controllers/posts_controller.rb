@@ -35,6 +35,10 @@ class PostsController < ApplicationController
   end
   
   def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    
+    redirect_to root_path
   end
   
   #methods that apply to the methods above in this controller and not no where else
