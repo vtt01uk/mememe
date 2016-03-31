@@ -1,7 +1,7 @@
 <div class="comment clearfix">
   <div class="comment_content">
     <p class="comment_name">
-      <em><%= comment.name %></em>
+      <strong><%= comment.name %></strong>
     </p>
     <p class="comment_body">
       <%= comment.body %>
@@ -10,4 +10,9 @@
       <%= time_ago_in_words(comment.created_at) %> ago
     </p>
   </div>
+    <p>
+      <%= link_to "Delete", [comment.post, comment], method: :delete, data: { confirm: "Are you sure?" }, class: "button" %>
+    </p>
+    
+
 </div>
