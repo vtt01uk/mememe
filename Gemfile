@@ -47,3 +47,10 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+#Pg is the Ruby interface to the {PostgreSQL RDBMS}
+  gem 'pg', '~> 0.18.4'
+#Run Rails the 12factor way
+  gem 'rails_12factor', '~> 0.0.3'
+end
+
